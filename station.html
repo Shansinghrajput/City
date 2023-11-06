@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Editor</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to Station</h1>
+        <nav>
+            <ul>
+                <li><a herf="C:\Users\HP\responsiveweb.html"></a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="#cities">Cities</a></li>
+                <li><a href="#drivers">Drivers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="C:\Users\HP\Downloads\Driver Signup.html">Signup</a></li>
+                <li><a href="C:\Users\HP\login.html">login.</a></li>
+                <li><a href="C:\Users\HP\driverdashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1>Book a Taxi</h1>
+    <form id="bookingForm">
+        <label for="booking_type">Select Booking Type:</label>
+        <select name="booking_type" id="booking_type">
+            <option value="local">Local (Rs. 10)</option>
+            <option value="outstation">Outstation (Rs. 100)</option>
+            <style>
+                /* Container for centering content */
+                .center-container {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    height: 1000vh; /* Set the container height to the full viewport height */
+                }
+        
+                /* Style for the button */
+                button {
+                    padding: 10px 20px;
+                    background-color: #007BFF;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                }
+            </style>
+        </select>
+        <button type="button" id="bookNow">Book Now</button>
+    </form>
+    <style>
+        /* Container for centering content */
+        .center-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 1000vh; /* Set the container height to the full viewport height */
+        }
+
+        /* Style for the button */
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <div id="bookingResponse"></div>
+
+    <script>
+        document.getElementById('bookNow').addEventListener('click', function() {
+            var booking_type = document.getElementById('booking_type').value;
+
+            // Simulated payment process
+            if (confirm("Pay now for booking?")) {
+                // Payment successful
+                var response = "Payment successful. Taxi booked!";
+                document.getElementById('bookingResponse').innerText = response;
+            } else {
+                // Payment failed
+                var response = "Payment failed. Taxi booking unsuccessful.";
+                document.getElementById('bookingResponse').innerText = response;
+            }
+        });
+    </script>
+    
+    <section id="home">
+        <h2>Explore the Incredible India</h2>
+        <p>Discover the beauty, culture, and diversity of India with our expert guidance.</p>
+        <a href="#cities" class="btn">Explore Cities</a>
+        <a href="#drivers" class="btn">Hire a Driver</a>
+    </section>
+
+    <section id="cities">
+        <h2>Popular Cities in India</h2>
+        <ul>
+            <li><a href="city.html?name=lucknow">lucknow</a></li>
+            <li><a href="city.html?name=Delhi">Delhi</a></li>
+            <!-- Add more cities as needed -->
+        </ul>
+    </section>
+
+    <section id="drivers">
+        <h2>Hire a Driver</h2>
+        <p>Explore our driver hire services to make your travel in India more comfortable and convenient.</p>
+        <a href="driver.html" class="btn">View Drivers</a>
+    </section>
+
+    <section id="taxi">
+        <h2>Hire a Taxi</h2>
+        <p>Explore our taxi hire services to make your travel in India more comfortable and convenient.</p>
+        <a href="taxi.html" class="btn">View taxi</a>
+    </section>
+
+    
+    <section id="home">
+        <!-- ... (home section remains the same) ... -->
+    </section>
+
+    <section id="cities">
+        <!-- ... (cities section remains the same) ... -->
+    </section>
+
+    <section id="drivers">
+        <!-- ... (drivers section remains the same) ... -->
+    </section>
+
+    <section id="car-categories">
+        <h2>Car Categories</h2>
+        <p>Select a car category for your travel:</p>
+        <select id="car-category">
+            <option value="economy">Economy</option>
+            <option value="standard">Standard</option>
+            <option value="luxury">Luxury</option>
+            <option value="suv">SUV</option>
+            <!-- Add more car categories as needed -->
+        </select>
+        <button id="generate-task" class="btn">Generate Task</button>
+        <div id="task-result">
+            <!-- Task result will be displayed here-->
+            
+            <section id="contact">
+        <h2>Contact Station</h2>
+        <p>Ready to explore India or have questions? Contact us today.</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>&copy; 2023 India Travel Agency</p>
+    </footer>
+</body>
+</html>
+
